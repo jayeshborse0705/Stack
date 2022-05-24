@@ -36,6 +36,32 @@ namespace StackProject
                 temp=temp.next;
             }
         }
-
+        internal void peek()
+        {
+            if (this.top==null)
+            {
+                Console.WriteLine("stack is empty");
+                return;
+            }
+            Console.WriteLine("{0} is in top of stack",this.top.data);
+        }
+        internal void pop()
+        {
+            if (this.top==null)
+            {
+                Console.WriteLine("stack is empty, delation is not possible");
+                return ;
+            }
+            Console.WriteLine("value popped is {0}",this.top.data);
+            this.top=this.top.next;
+        }
+        internal void IsEmpty()
+        {
+            while (this.top !=null)
+            {
+                peek();
+                pop();
+            }
+        }
     }
 }
